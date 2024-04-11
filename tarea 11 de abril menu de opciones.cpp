@@ -6,7 +6,7 @@ int control_global = 1;
 
 void mensaje(char letra, string palabra, int numero, int op){
 	
-	while (control_global = 1) { 
+	while (control_global == 1) { 
 	cout <<"Que opcion desea realizar?: "<<endl;
 	cin >> op;
 	
