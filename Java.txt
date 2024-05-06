@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class MenuMultiplosAngulos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean continuar = true;
+        while (continuar) {
+            System.out.println("Menú:");
+            System.out.println("1. Mostrar los primeros 10 múltiplos de un número.");
+            System.out.println("2. Responder si o no.");
+            System.out.println("3. Encontrar el ángulo faltante al ingresar dos ángulos previamente.");
+            System.out.println("4. Salir");
+
+            System.out.print("Ingrese su elección: ");
+            int opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Ingrese el número del cual desea conocer los múltiplos: ");
+                    int numero = scanner.nextInt();
+                    mostrarMultiplos(numero);
+                    break;
+                case 2:
+                    System.out.print("¿Desea continuar? (si/no): ");
+                    String respuesta = scanner.next();
+                    if (respuesta.equalsIgnoreCase("si")) {
+                        System.out.println("Bienvenido");
+                    } else if (respuesta.equalsIgnoreCase("no")) {
+                        System.out.println("Adiós");
+                        continuar = false;
+                    } else {
+                        System.out.println("Respuesta inválida.");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Ingrese el primer ángulo: ");
+                    double angulo1 = scanner.nextDouble();
+                    System.out.print("Ingrese el segundo ángulo: ");
+                    double angulo2 = scanner.nextDouble();
+                    double anguloFaltante = encontrarAnguloFaltante(angulo1, angulo2);
+                    System.out.println("El ángulo faltante es: " + anguloFaltante);
+                    break;
+                case 4:
+                    System.out.println("Saliendo del programa...");
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
+        }
+        scanner.close();
+    }
+
+    public static void mostrarMultiplos(int numero) {
+        System.out.println("Los primeros 10 múltiplos de " + numero + " son:");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero * i);
+        }
+    }
+
+    public static double encontrarAnguloFaltante(double angulo1, double angulo2) {
+        return 180 - (angulo1 + angulo2);
+    }
+}
