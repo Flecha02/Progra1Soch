@@ -1,0 +1,37 @@
+num1 = 3
+num2 = 12
+
+suma = num1 + num2
+print(f'El resultado es: {suma}')
+
+num1 = 3
+num2 = 12
+
+resta = num1 - num2
+print(f'El resultado es: {resta}')
+
+num1 = 3
+num2 = 12
+
+multi = num1 * num2
+print(f'El resultado es: {multi}')
+
+num1 = 3
+num2 = 12
+
+division = num2 / num1
+print(f'El resultado es: {division}')
+
+num1 = 3
+num2 = 12
+
+potencia = num2 ** num1
+print(f'El resultado es: {potencia}')
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial (n-1)
+
+print(factorial(10))
