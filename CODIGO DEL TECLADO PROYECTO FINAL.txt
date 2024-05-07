@@ -1,0 +1,46 @@
+#include <Keyboard.h>
+
+const int botonupPin = 2;
+const int botondownPin = 3;
+const int botonizqPin =4;
+const int botonderPin =5;
+const int botonjumpPin = 6;
+
+void setup() {
+ pinMode(botonupPin, INPUT_PULLUP);
+ pinMode(botondownPin, INPUT_PULLUP);
+ pinMode(botonizqPin, INPUT_PULLUP);
+ pinMode(botonderPin, INPUT_PULLUP);
+ pinMode(botonjumpPin, INPUT_PULLUP);
+
+ Keyboard.begin();
+
+}
+
+void loop() {
+ if (digitalRead(botonupPin)== LOW){
+  Keyboard.press ('W');
+ } else {
+  Keyboard.release('W');
+ }
+ if (digitalRead(botondownPin)== LOW){
+  Keyboard.press ('S');
+ } else {
+  Keyboard.release('S');
+ }
+ if (digitalRead(botonizqPin)== LOW){
+  Keyboard.press ('A');
+ } else {
+  Keyboard.release('A');
+ }
+ if (digitalRead(botonderPin)== LOW){
+  Keyboard.press ('D');
+ } else {
+  Keyboard.release('D');
+ }
+ if (digitalRead(botonjumpPin)== LOW){
+  Keyboard.press (' ');
+ } else {
+  Keyboard.release(' ');
+ }
+}
