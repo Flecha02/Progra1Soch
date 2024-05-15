@@ -102,7 +102,7 @@ int main(int argc, char *argv[]) {
 	
 	for (int i = 0; i < 10; i++){
 		if (externo == arreglo4[i]){
-			cout << "Felicidades";
+			cout << "Existe su numero es: "<<arreglo[i];
 			encontra = true;
 		} 
 	}
