@@ -71,19 +71,19 @@ int main(int argc, char *argv[]) {
 	
 	// Ingresar los valores para el arreglo
 	for (int i = 0; i < 4; ++i) {
-		cout << "Ingresa el valor para el elemento "<<endl;
+		cout << "Ingrese valores para llenar el Arreglo: "<<endl;
 		cin >> arreglo4[i];
 	}
 	
 	for (int i = 0; i < 4; ++i) {
 		arreglo_nuevo[i] = arreglo4[i];
-		cout << "El numero en la casilla: "<< i << " es: " << arreglo_nuevo [i] <<endl;
+		cout << "El numero entero: "<< i << " es: " << arreglo_nuevo [i] <<endl;
 	}
 	
 	for (int i = 0; i < 4; ++i) {
 		decimal = arreglo4[i] - arreglo_nuevo[i];
 		arreglo_decimal[i] = decimal;
-		cout << "El numero en la casilla: "<< i << " es: " << arreglo_decimal [i] <<endl;
+		cout << "El numero decimal: "<< i << " es: " << arreglo_decimal [i] <<endl;
 	}
 	
 	return 0;
